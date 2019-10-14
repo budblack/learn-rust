@@ -7,11 +7,11 @@ fn build_linux_unkonw() {
     .cpp(true)
     .flag("-std=c++11")
     .warnings(false)
-    .include("./lib/hello/darwin")
+    .include("./lib/hello/linux")
     .file("./src/cpp/hello/double.cc")
     .compile("l01");
   // -------------
-  println!("cargo:rustc-link-search=native=./lib/hello/darwin");
+  println!("cargo:rustc-link-search=native=./lib/hello/linux");
   println!("cargo:rustc-link-lib=hello");
   // -------------
 }
